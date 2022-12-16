@@ -7,11 +7,12 @@ public class Bolo {
 	protected String sabor;
 	protected String descricao;	
 	protected double preco;
+	protected double precoMassa;
 	
 	public Bolo (String s, String d, double p) {
 		this.sabor = s;
 		this.descricao = d; 
-		this.preco = p;
+		this.preco = p;		
 	}
 	
 	public String toString() {
@@ -21,21 +22,23 @@ public class Bolo {
 	/* Método para a aplicação de sobreposição */ 
 	
 	public void desconto() {
-		System.out.println("Não há desconto");
+		this.preco*=1;
 	}
 	
 	/* Método para a aplicação de sobrecarga */ 
 	
 	
 	public void precoTotal(double precoMassa, double precoCobertura, double precoRecheio) {
-		double preco = precoMassa + precoCobertura + precoRecheio;
-	}
-	
+		preco = precoMassa + precoCobertura + precoRecheio;
+	}	
 	
 	public void precoTotal(double precoMassa, double precoCobertura) {
-		double preco = precoMassa + precoCobertura;
+		preco = precoMassa + precoCobertura;
 	}
 	
+	public void precoTotal(double precoMassa) {
+		preco = precoMassa;
+	}
 	
 	/* Métodos acessores */ 
 	
@@ -49,6 +52,10 @@ public class Bolo {
 	
 	public double getPreco() {
 		return preco;
+	}
+	
+	public double getPrecoMassa() {
+		return precoMassa;
 	}
 	
 	/* Métodos modificadores */ 
@@ -65,6 +72,8 @@ public class Bolo {
 		this.preco = preco;
 	}
 
-	
+	public void setPrecoMassa(double precoMassa) {
+		this.precoMassa = precoMassa;
+	}	
 
 }

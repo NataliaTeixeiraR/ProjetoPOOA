@@ -15,15 +15,25 @@ public class OrcamentoBolo {
 		
 		BoloDeFrutas bf = new BoloDeFrutas(null, null, 0); 
 		BoloDeChocolate bc = new BoloDeChocolate (null, null, 0);		
-		
+		Bolo b = new Bolo (null, null, 0); 
+				
 		bf.setSabor("Morango");
-		bf.setDescricao("Bolo de massa branca com morango");		
+		bf.setDescricao("Bolo de massa branca com morango");	
 		bf.setPreco(100);	
 		
 		bc.setSabor("Bolo mousse de chocolate");
 		bc.setDescricao("Bolo de chocolate com mousse aerado");		
 		bc.setPreco(80);	
 		
+		b.setSabor("Bolo de fubá");
+		b.setDescricao("Bolo simples de fubá");	
+		b.precoTotal(40);	
+				
+		b.getSabor();
+		b.getDescricao();
+		b.desconto();
+		b.getPreco();
+								
 		bc.getSabor();
 		bc.getDescricao();
 		bc.desconto();
@@ -38,8 +48,10 @@ public class OrcamentoBolo {
 		
 		ArrayList<Bolo> bolos = new ArrayList <>();	
 		
+		bolos.add(b);
 		bolos.add(bf);
-		bolos.add(bc);			
+		bolos.add(bc);		
+		
 		     
 		System.out.println(bolos.toString());			
 
